@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>संगीत प्लेयर</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <audio id="playContinueSong" controls loop>
+        <source src="startSong.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="playEndSong" controls loop>
+      <source src="endSong.mp3" type="audio/mpeg">
+  </audio>
+
+    <button onclick="playContinueSong()">Starting..</button>
+    <button onclick="endSong()">Stop Song</button>
+    <button>Button 3</button>
+    <button>Button 4</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
