@@ -98,6 +98,55 @@ showUserGender.place(x=55, y=70)
 
 root.mainloop()
 
+
+
+
+import socket
+
+host = "127.0.0.1"
+port = 5001
+
+Client = socket.socket()
+Client.connect((host, port))
+
+message = input("Type message...")
+
+while message !='q':
+    Client.send(message.encode())
+    data = Client.recv(1024).decode()
+    print("from server : "+ str(data))
+
+    message = input("Type message...")
+
+Client.close()
+
+
+
+
+
+    import socket
+
+host = "127.0.0.1"
+port = 5001
+
+server = socket.socket()
+server.bind((host, port))
+server.listen()
+
+conn, addr = server.accept()
+print("Connection from : "+ str(addr))
+
+while True:
+    data = conn.recv(1024).decode()
+    print("from client : "+ str(data))
+    if not data:
+     break
+    data = input("Type message...")
+    conn.send(data.encode())
+conn.close()
+
+
+    
     -->
 </body>
 </html>
