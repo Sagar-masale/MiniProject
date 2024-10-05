@@ -3,6 +3,7 @@ const audio2 = document.getElementById("playEndSong");
 
 function playContinueSong() {
   audio2.pause();
+  audio2.currentTime = 0;
     if (audio1.paused) {
       audio1.play();
     } else {
