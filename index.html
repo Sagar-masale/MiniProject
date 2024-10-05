@@ -19,5 +19,85 @@
     <button>Button 4</button>
 
     <script src="script.js"></script>
+<!--     
+    import tkinter as tk
+from tkinter import messagebox
+def showMsg():
+
+    if var1.get() & var2.get():
+        messagebox.showinfo("error", "select only 1 gender")
+    elif var1.get():
+        messagebox.showinfo("User", "Data submited successfully")
+        getUname = entryName.get()
+        getUemail = entryEmail.get()
+
+        #apply data
+        showUserName.config(text=getUname)
+        showUserEmail.config(text=getUemail)
+        showUserGender.config(text="Male")
+    elif var2.get():
+         messagebox.showinfo("User", "Data submited successfully")
+         getUname = entryName.get()
+         getUemail = entryEmail.get()
+
+         #apply data
+         showUserName.config(text=getUname)
+         showUserEmail.config(text=getUemail)
+         showUserGender.config(text="Female")
+    else:
+         messagebox.showinfo("User", "Please insert data")
+    
+root = tk.Tk()
+
+root.geometry("400x400")
+#Get input from the user in root window
+name = tk.Label(root, text="Enter Name : ")
+name.place(x=10,y=10)
+entryName = tk.Entry(root)
+entryName.place(x=90,y=10)
+email = tk.Label(root, text="Enter Email: ")
+email.place(x=10, y=50)
+entryEmail = tk.Entry(root)
+entryEmail.place(x=90, y=50)
+Gender = tk.Label(root, text="Select Gendar : ")
+Gender.place(x=10, y=90)
+var1 = tk.IntVar()
+var2 = tk.IntVar()
+checkButton = tk.Checkbutton(root, text="Male",variable=var1)
+checkButton.place(x=10, y=120)
+checkButton = tk.Checkbutton(root, text="Female",variable=var2)
+checkButton.place(x=10, y=140)
+submitButton = tk.Button(root, text="Submit", command=showMsg)
+submitButton.place(x=10, y=175)
+
+#Frame from user output Data
+dataFrame = tk.Frame(root, height=150, width=400, bg="white")
+dataFrame.place(x=10, y=230)
+outputHead = tk.Label(dataFrame, text="...User Data...", bg="white")
+outputHead.place(x=150, y=10)
+
+#User name
+userName = tk.Label(dataFrame, text="Name : ", bg="white")
+userName.place(x=10, y=30)
+showUserName = tk.Label(dataFrame, text="", bg="white")
+showUserName.place(x=55, y=30)
+
+#User Email
+userEmail = tk.Label(dataFrame, text="Email : ", bg="white")
+userEmail.place(x=10, y=50)
+showUserEmail = tk.Label(dataFrame, text="", bg="white")
+showUserEmail.place(x=55, y=50)
+
+#User Gendar
+userGender = tk.Label(dataFrame, text="Gender : ", bg="white")
+userGender.place(x=10, y=70)
+showUserGender = tk.Label(dataFrame, text="", bg="white")
+showUserGender.place(x=55, y=70)
+
+
+
+root.mainloop()
+
+    -->
 </body>
 </html>
